@@ -10,17 +10,17 @@
 #
 #   Instruction
 #               1. Source("DEAnalysis.R")
-#               2. Run the function "dea_hans" - specify raw count path and the output directory
+#               2. Run the function "dea" - specify raw count path and the output directory
 #               3. The results will be generated under the output directory
 #
 #   Example
 #               > source("The_directory_of_DEAnalysis.R/DEAnalysis.R")
-#               > dea_hans(rCntPath="./data/raw_counts.rda",
-#                          outputDir="./results/differential_expression/")
+#               > dea(rCntPath="./data/raw_counts.rda",
+#                     outputDir="./results/differential_expression/")
 ###
 
-dea_hans <- function(rCntPath="//isilon.c2b2.columbia.edu/ifs/archive/shares/bisr/Ferrari/RNASeq_Analysis/data/raw_counts.rda",
-                     outputDir="//isilon.c2b2.columbia.edu/ifs/archive/shares/bisr/Ferrari/RNASeq_Analysis/results/differential_expression/") {
+dea <- function(rCntPath="//isilon.c2b2.columbia.edu/ifs/archive/shares/bisr/Ferrari/RNASeq_Analysis/data/raw_counts.rda",
+                outputDir="//isilon.c2b2.columbia.edu/ifs/archive/shares/bisr/Ferrari/RNASeq_Analysis/results/differential_expression/") {
   
   ### load library
   if(!require(xlsx, quietly = TRUE)) {
